@@ -2,23 +2,204 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Catálogo | ViaAuto Pro</title>
+  <title>Catálogo de Veículos | ViaAuto Pro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f6f8;
+    }
+
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .filters {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .filters select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h3 {
+      margin: 0 0 10px;
+    }
+
+    .price {
+      color: #16a34a;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-body p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      padding: 10px;
+      background: #0ea5e9;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #0284c7;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="header">
-  <h1>🚗 Catálogo de Veículos</h1>
-  <a href="index.html">← Voltar</a>
+<header>
+  <h2>🚗 ViaAuto Pro | Catálogo</h2>
+  <a href="index.html">← Voltar ao início</a>
 </header>
 
-<main style="padding:40px">
-  <div class="card">
-    <h3>Em breve</h3>
-    <p>Os veículos disponíveis para negociação aparecerão aqui.</p>
+<div class="container">
+
+  <!-- Filtros -->
+  <div class="filters">
+    <select>
+      <option>Marca</option>
+      <option>Volkswagen</option>
+      <option>Chevrolet</option>
+      <option>Fiat</option>
+      <option>Toyota</option>
+    </select>
+
+    <select>
+      <option>Ano</option>
+      <option>2024</option>
+      <option>2023</option>
+      <option>2022</option>
+    </select>
+
+    <select>
+      <option>Preço</option>
+      <option>Até R$ 50.000</option>
+      <option>R$ 50.000 - R$ 80.000</option>
+      <option>Acima de R$ 80.000</option>
+    </select>
   </div>
-</main>
+
+  <!-- Grid de veículos -->
+  <div class="grid">
+
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" alt="Veículo">
+      <div class="card-body">
+        <h3>Volkswagen Golf 1.4 TSI</h3>
+        <div class="price">R$ 78.900</div>
+        <p>Ano: 2018</p>
+        <p>KM: 72.000</p>
+        <p>Local: Curitiba - PR</p>
+        <a class="btn" href="login.html">Tenho interesse</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a" alt="Veículo">
+      <div class="card-body">
+        <h3>Toyota Corolla XEi</h3>
+        <div class="price">R$ 92.500</div>
+        <p>Ano: 2020</p>
+        <p>KM: 55.000</p>
+        <p>Local: São Paulo - SP</p>
+        <a class="btn" href="login.html">Tenho interesse</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1583267746897-2cf415887172" alt="Veículo">
+      <div class="card-body">
+        <h3>Fiat Cronos 1.3</h3>
+        <div class="price">R$ 59.900</div>
+        <p>Ano: 2021</p>
+        <p>KM: 38.000</p>
+        <p>Local: Curitiba - PR</p>
+        <a class="btn" href="login.html">Tenho interesse</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 ViaAuto Pro • Plataforma digital de negociação automotiva
+</footer>
 
 </body>
 </html>
